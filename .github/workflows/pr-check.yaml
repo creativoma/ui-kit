@@ -1,0 +1,38 @@
+name: PR Check
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  lint-and-build:
+    name: 🧪 Lint & Build Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: 📥 Checkout repository
+
+      - uses: actions/setup-node@v4
+        with: 
+          node-version: 22
+        name: 🧰 Setup Node.js
+
+      - uses: pnpm/action-setup@v3
+        with: 
+          version: 10.6.2
+        name: 🧰 Setup pnpm
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🧹 Run ESLint
+        run: pnpm lint
+
+      - name: 🔨 Build UI Kit
+        run: pnpm build
+
+      - name: 🧪 Type check
+        run: pnpm type-check
+
+      - name: ✅ All checks passed
+        run: echo "🎉 PR is ready for review!"
