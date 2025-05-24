@@ -1,54 +1,57 @@
-# Starlight Starter Kit: Basics
+# UI Kit Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Comprehensive documentation for @creativoma/ui-kit built with Starlight.
 
-```
-pnpm create astro@latest -- --template starlight
-```
+## 🌐 Live Documentation
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+**[ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📚 Content
 
-## 🚀 Project Structure
+The documentation includes:
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+- 🚀 **Getting Started** - Installation and setup guides
+- 📖 **Component API** - Detailed component documentation
+- 🎨 **Design System** - Colors, typography, and spacing
+- 💡 **Examples** - Real-world usage examples
+- 🔧 **Migration Guides** - Upgrade instructions
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+## 🛠️ Development
+
+```bash
+# From monorepo root
+pnpm dev --filter=docs
+
+# Or from this directory
+cd apps/docs
+pnpm dev
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Visit [localhost:4321](http://localhost:4321) to view the documentation.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## ✍️ Contributing to Docs
 
-Static assets, like favicons, can be placed in the `public/` directory.
+1. Documentation files are in `src/content/docs/`
+2. Use Markdown or MDX format
+3. Follow the existing structure and style
+4. Test your changes locally before submitting
 
-## 🧞 Commands
+### Adding New Pages
 
-All commands are run from the root of the project, from a terminal:
+```bash
+# Create a new guide
+touch src/content/docs/guides/your-guide.md
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+# Create a new reference
+touch src/content/docs/reference/your-reference.md
+```
 
-## 👀 Want to learn more?
+## 🚀 Deployment
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Automatically deployed to Vercel on every push to main branch.
+
+## 🏗️ Built With
+
+- [Starlight](https://starlight.astro.build/) - Documentation framework
+- [Astro](https://astro.build/) - Static site generator
+- [TypeScript](https://www.typescriptlang.org/) - Type safety

@@ -1,30 +1,31 @@
-# UI Kit
+# @creativoma/ui-kit
 
 A minimal and elegant React component library built with TypeScript, Vite, and Tailwind CSS v4.
 
-## Installation
+## 🚀 Quick Links
+
+- 📦 **NPM**: [@creativoma/ui-kit](https://www.npmjs.com/package/@creativoma/ui-kit)
+- 🎮 **Playground**: [ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)
+- 📚 **Documentation**: [ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)
+- 🔗 **Repository**: [github.com/creativoma/ui-kit](https://github.com/creativoma/ui-kit)
+
+## 📦 Installation
 
 ```bash
 pnpm install @creativoma/ui-kit
 ```
 
-## Prerequisites
+## 🛠️ Prerequisites
 
-This library requires Tailwind CSS v4 to be installed in your project:
-
-```bash
-pnpm install -D tailwindcss@4 postcss autoprefixer
-```
-
-If you're using Tailwind CSS v4, make sure to also install the separate PostCSS plugin:
+This library requires Tailwind CSS v4:
 
 ```bash
-pnpm install -D @tailwindcss/postcss
+pnpm install -D tailwindcss@4 postcss autoprefixer @tailwindcss/postcss
 ```
 
-## Setup
+## ⚙️ Setup
 
-1. Add the library to your Tailwind CSS content configuration:
+### 1. Configure Tailwind CSS
 
 ```js
 // tailwind.config.js
@@ -37,7 +38,7 @@ export default {
 }
 ```
 
-2. Make sure your PostCSS configuration includes the correct plugin for Tailwind CSS v4:
+### 2. Configure PostCSS
 
 ```js
 // postcss.config.js
@@ -49,38 +50,33 @@ export default {
 }
 ```
 
-## Import Styles
-
-Import the component styles in your app's entry file:
+### 3. Import Styles
 
 ```js
 // In your main entry file (e.g., main.jsx or App.jsx)
 import '@creativoma/ui-kit/styles'
 ```
 
-## Usage
+## 🎯 Usage
 
 ```tsx
 import { Button, Card } from '@creativoma/ui-kit'
 
 function App() {
   return (
-    <>
-      <Card>
-        <h1>Welcome</h1>
-        <div className="mt-4 flex gap-2">
-          <Button>Success</Button>
-          <Button variant="danger" onClick={() => alert('Error!')}>
-            Error
-          </Button>
-        </div>
-      </Card>
-    </>
+    <Card>
+      <h1>Welcome to UI Kit</h1>
+      <div className="mt-4 flex gap-2">
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="danger">Danger</Button>
+      </div>
+    </Card>
   )
 }
 ```
 
-## Components
+## 🧩 Components
 
 ### Button
 
@@ -91,7 +87,6 @@ function App() {
 ```
 
 **Props:**
-
 - `variant`: `primary` | `secondary` | `danger` | `ghost`
 - `size`: `sm` | `md` | `lg`
 - `loading`: boolean
@@ -105,71 +100,31 @@ function App() {
 ```
 
 **Props:**
-
 - `padding`: `none` | `sm` | `md` | `lg`
 - `shadow`: `none` | `sm` | `md` | `lg`
 - `border`: boolean
 
-## Tailwind CSS v4 Compatibility
+## 📖 Full Documentation
 
-This library is built with Tailwind CSS v4. If you're upgrading from v3, please note some important changes:
+For detailed documentation, examples, and API reference, visit:
+**[ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)**
 
-1. The PostCSS plugin is now a separate package: `@tailwindcss/postcss`
-2. The default border color has changed to `currentColor` in v4 (we include a compatibility layer)
-3. For more information, check the [Tailwind CSS v4 upgrade guide](https://tailwindcss.com/blog/tailwindcss-v4-alpha)
+## 🎮 Interactive Playground
 
-## Development
+Test components interactively at:
+**[ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)**
 
-```bash
-# Install dependencies
-pnpm install
+## 🔄 Tailwind CSS v4 Compatibility
 
-# Start playground
-pnpm dev
+Built with Tailwind CSS v4. Key differences from v3:
+- PostCSS plugin is separate: `@tailwindcss/postcss`
+- Border color defaults to `currentColor`
+- [Migration guide](https://tailwindcss.com/blog/tailwindcss-v4-alpha)
 
-# Build library
-pnpm build
-```
+## 🛠️ Development
 
-## License
+This package is part of a monorepo. See the [main repository](https://github.com/creativoma/ui-kit) for development instructions.
+
+## 📄 License
 
 MIT License
-
-## Commands for Publishing
-
-### For Git:
-
-```bash
-# Initialize git (if you haven't done it)
-git init
-
-# Add files
-git add .
-
-# First commit
-git commit -m "Initial commit: Button, Card"
-
-# Create repo on GitHub and connect
-git branch -M main
-git remote add origin https://github.com/creativoma/creativoma-ui.git
-git push -u origin main
-```
-
-### For npm:
-
-```bash
-# Login to npm (only the first time)
-npm login
-
-# Build the library
-pnpm build
-
-# Publish
-pnpm publish --access public
-
-# For future versions
-pnpm version patch  # 0.1.0 -> 0.1.1
-pnpm version minor  # 0.1.1 -> 0.2.0
-pnpm version major  # 0.2.0 -> 1.0.0
-pnpm publish
-```
