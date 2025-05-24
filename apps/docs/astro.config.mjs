@@ -7,26 +7,30 @@ export default defineConfig({
   site: 'https://ui-kit-docs-mu.vercel.app',
   integrations: [
     starlight({
-      title: 'My Docs',
-      description: 'Documentation for my project',
+      title: 'UI Kit',
+      description:
+        'A minimal and elegant React component library built with TypeScript, Vite, and Tailwind CSS v4.',
       social: [
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/withastro/starlight',
+          href: 'https://github.com/creativoma/ui-kit',
         },
       ],
       sidebar: [
         {
-          label: 'Guides',
+          label: 'Getting Started',
           items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
+            { label: 'Installation', slug: 'guides/installation' },
+            { label: 'Configuration', slug: 'guides/configuration' },
           ],
         },
         {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          label: 'Components',
+          items: [
+            { label: 'Button', slug: 'components/button' },
+            { label: 'Card', slug: 'components/card' },
+          ],
         },
       ],
     }),
