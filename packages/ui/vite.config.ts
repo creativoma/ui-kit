@@ -1,16 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [react()], // Quité @tailwindcss/vite
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+      copyDtsFiles: true,
+    }),
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './'),
     },
   },
   css: {
-    postcss: './postcss.config.ts', // Usa PostCSS config
+    postcss: './postcss.config.ts',
   },
   build: {
     lib: {
@@ -35,6 +42,6 @@ export default defineConfig({
       },
     },
     cssCodeSplit: false,
-    emptyOutDir: false,
+    emptyOutDir: true,
   },
 })
