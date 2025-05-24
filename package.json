@@ -8,7 +8,6 @@
         "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
-        "lint:fix": "turbo lint -- --fix",
         "type-check": "turbo type-check",
         "format": "turbo format"
     },
