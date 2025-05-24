@@ -1,5 +1,5 @@
 // Styles
-import './styles.css'
+import './index.css'
 
 // Components
 export { Button } from './components/button'

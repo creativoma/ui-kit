@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import '../styles.css'
-import { Button } from '@/components/button'
-import { Card } from '@/components/card'
+import { Button, Card } from '@creativoma/ui-kit'
 
 export const Playground = () => {
   const [loading, setLoading] = useState(false)

@@ -22,14 +22,15 @@ const shadowVariants = {
   lg: 'shadow-lg',
 }
 
-export const Card: React.FC<CardProps> = ({
+// ✅ Cambio principal: quitar React.FC y usar función normal
+export const Card = ({
   children,
   padding = 'md',
   shadow = 'sm',
   border = true,
   className,
   ...props
-}) => {
+}: CardProps) => {
   return (
     <div
       className={cn(

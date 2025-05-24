@@ -17,6 +17,6 @@
     "allowSyntheticDefaultImports": true,
     "strict": false
   },
-  "include": ["src/index.ts", "src/components/**/*", "src/utils/**/*"],
-  "exclude": ["src/app/**/*"]
+  "include": ["index.ts", "components/**/*", "utils/**/*"],
+  "exclude": ["node_modules", "dist", ".turbo"]
 }
