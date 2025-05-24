@@ -1,4 +1,6 @@
-// src/index.ts
+// Styles
+import './styles.css'
+
 // Components
 export { Button } from './components/button'
 export { Card } from './components/card'
