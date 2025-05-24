@@ -1,11 +1,14 @@
 {
     "name": "@creativoma/ui-kit-monorepo",
     "private": true,
+    "version": "0.0.1",
+    "type": "module",
     "packageManager": "pnpm@10.6.2",
     "scripts": {
         "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
+        "lint:fix": "turbo lint -- --fix",
         "type-check": "turbo type-check",
         "format": "turbo format"
     },
