@@ -87,6 +87,7 @@ function App() {
 ```
 
 **Props:**
+
 - `variant`: `primary` | `secondary` | `danger` | `ghost`
 - `size`: `sm` | `md` | `lg`
 - `loading`: boolean
@@ -100,6 +101,7 @@ function App() {
 ```
 
 **Props:**
+
 - `padding`: `none` | `sm` | `md` | `lg`
 - `shadow`: `none` | `sm` | `md` | `lg`
 - `border`: boolean
@@ -117,6 +119,7 @@ Test components interactively at:
 ## 🔄 Tailwind CSS v4 Compatibility
 
 Built with Tailwind CSS v4. Key differences from v3:
+
 - PostCSS plugin is separate: `@tailwindcss/postcss`
 - Border color defaults to `currentColor`
 - [Migration guide](https://tailwindcss.com/blog/tailwindcss-v4-alpha)

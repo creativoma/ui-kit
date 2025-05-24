@@ -29,6 +29,7 @@ pnpm dev
 ## 📦 Dependencies
 
 This playground depends on:
+
 - `@creativoma/ui-kit` (workspace dependency)
 - React 19
 - Vite 6

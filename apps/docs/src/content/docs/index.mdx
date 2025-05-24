@@ -1,36 +1,112 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: UI Kit Documentation
+description: A minimal and elegant React component library built with TypeScript, Vite, and Tailwind CSS v4.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Build beautiful UIs with our React component library
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /guides/installation/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: View Components
+      link: /components/button/
+      icon: document
+    - text: Try Playground
+      link: https://ui-kit-playground.vercel.app/
+      icon: external
+      variant: minimal
+    - text: NPM Package
+      link: https://www.npmjs.com/package/@creativoma/ui-kit
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components'
 
-## Next steps
+## ✨ Features
 
 <CardGrid stagger>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
+  <Card title="🚀 Modern Stack" icon="rocket">
+    Built with React 19, TypeScript, Vite, and Tailwind CSS v4 for optimal
+    performance and developer experience.
   </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
+  <Card title="🎨 Customizable" icon="setting">
+    Flexible component variants, sizes, and styles that fit seamlessly into your
+    design system.
   </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
+  <Card title="📱 Responsive" icon="laptop">
+    Mobile-first components that work beautifully across all device sizes and
+    screen resolutions.
   </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+  <Card title="♿ Accessible" icon="approve-check">
+    Built with accessibility in mind, following WCAG guidelines and best
+    practices for inclusive design.
+  </Card>
+</CardGrid>
+
+## 🎯 Quick Start
+
+```bash
+# Install the package
+pnpm install @creativoma/ui-kit
+
+# Install required dependencies
+pnpm install -D tailwindcss@4 postcss autoprefixer @tailwindcss/postcss
+```
+
+```tsx
+import { Button, Card } from '@creativoma/ui-kit'
+import '@creativoma/ui-kit/styles'
+
+function App() {
+  return (
+    <Card>
+      <h1>Welcome to UI Kit</h1>
+      <div className="flex gap-2">
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+      </div>
+    </Card>
+  )
+}
+```
+
+## 🧩 Components
+
+<CardGrid>
+  <Card title="Button" icon="approve-check-circle">
+    Versatile button component with multiple variants, sizes, and loading
+    states. [View Button →](/components/button/)
+  </Card>
+  <Card title="Card" icon="document">
+    Flexible container component with customizable padding, shadows, and
+    borders. [View Card →](/components/card/)
+  </Card>
+  <Card title="More Components" icon="add-document">
+    Additional components are coming soon. Follow our roadmap for updates. [View
+    Roadmap →](/guides/roadmap/)
+  </Card>
+</CardGrid>
+
+## 📚 Resources
+
+<CardGrid>
+  <Card title="🎮 Interactive Playground" icon="laptop">
+    Test and experiment with all components in our live playground environment.
+    [Try Playground →](https://ui-kit-playground.vercel.app/)
+  </Card>
+  <Card title="📦 NPM Package" icon="external">
+    Install and use the UI Kit in your projects via npm. [View on NPM
+    →](https://www.npmjs.com/package/@creativoma/ui-kit)
+  </Card>
+  <Card title="💻 Source Code" icon="github">
+    Explore the source code, contribute, or report issues on GitHub. [View
+    Repository →](https://github.com/creativoma/ui-kit)
+  </Card>
+  <Card title="🚀 Getting Started" icon="rocket">
+    Learn how to install and configure the UI Kit in your React project.
+    [Installation Guide →](/guides/installation/)
   </Card>
 </CardGrid>
