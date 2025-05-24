@@ -1,5 +1,5 @@
 {
-    "buildCommand": "cd ../.. && pnpm install && cd apps/playground && pnpm build",
-    "outputDirectory": "dist",
-    "installCommand": "cd ../.. && pnpm install"
+  "buildCommand": "cd ../.. && pnpm install && pnpm build --filter=@creativoma/ui-kit && cd apps/playground && pnpm build",
+  "outputDirectory": "dist",
+  "installCommand": "cd ../.. && pnpm install"
 }
