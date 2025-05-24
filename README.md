@@ -31,6 +31,15 @@ module.exports = {
 }
 ```
 
+## Import Styles
+
+You need to import the component styles in your app's entry file:
+
+```js
+// In your main entry file (e.g., main.jsx or App.jsx)
+import '@creativoma/ui-kit/styles'
+```
+
 ## Usage
 
 ```tsx
@@ -100,7 +109,7 @@ npm run build
 
 MIT License
 
-## 7. Commands for Publishing
+## Commands for Publishing
 
 ### For Git:
 
