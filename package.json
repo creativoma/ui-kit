@@ -46,7 +46,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "rm -rf dist && npx tsc --project tsconfig.build.json && vite build",
     "playground": "vite src/app",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
