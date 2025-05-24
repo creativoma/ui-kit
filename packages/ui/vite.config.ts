@@ -1,26 +1,17 @@
+// packages/ui/vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
     react(),
-    dts({
-      insertTypesEntry: true,
-      copyDtsFiles: true,
-    }),
+    tailwindcss(),
   ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './'),
-    },
-  },
-  css: {
-    postcss: './postcss.config.ts',
-  },
   build: {
     lib: {
+      // Cambia esta línea para apuntar a tu archivo index.ts en lugar de src/index.ts
       entry: resolve(__dirname, 'index.ts'),
       name: 'UIKit',
       formats: ['es', 'umd'],
@@ -33,6 +24,7 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        // Asegurarse de que los archivos CSS se generen correctamente
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith('.css')) {
             return 'styles/index.css'
@@ -42,6 +34,7 @@ export default defineConfig({
       },
     },
     cssCodeSplit: false,
-    emptyOutDir: true,
+    // No vaciamos el directorio para evitar borrar los tipos generados manualmente
+    emptyOutDir: false,
   },
 })

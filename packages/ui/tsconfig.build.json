@@ -2,17 +2,13 @@
   "compilerOptions": {
     "target": "ES2020",
     "lib": ["ES2020", "DOM"],
-    "module": "CommonJS",
+    "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Para generar declarations */
     "moduleResolution": "node",
     "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "./dist",
     "jsx": "react-jsx",
-
-    /* Resolver paths manualmente */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false

@@ -1,6 +1,6 @@
 {
   "name": "@creativoma/ui-kit",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Simple and beautiful UI components for React",
   "author": "creativoma",
   "license": "MIT",
@@ -60,6 +60,7 @@
     "@tailwindcss/postcss": "^4.1.7",
     "@tailwindcss/vite": "^4.1.7",
     "@types/node": "^22.15.21",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.5",
     "@vitejs/plugin-react": "^4.5.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
