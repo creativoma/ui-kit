@@ -46,12 +46,9 @@
     "react-dom": ">=19.0.0"
   },
   "scripts": {
-    "dev": "vite",
     "build": "rm -rf dist && npx tsc --project tsconfig.build.json && vite build",
-    "playground": "vite src/app",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
-    "preview": "vite preview",
     "format": "prettier --write .",
     "version:patch": "npm version patch && npm publish",
     "version:minor": "npm version minor && npm publish",
@@ -62,28 +59,17 @@
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.27.0",
     "@tailwindcss/postcss": "^4.1.7",
     "@tailwindcss/vite": "^4.1.7",
     "@types/node": "^22.15.21",
-    "@types/react": "^19.1.5",
-    "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.5.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.27.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.1.0",
     "postcss": "^8.5.3",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tailwindcss": "^4.1.7",
-    "turbo": "^2.5.3",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.32.1",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4"
   }
