@@ -2,17 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
-import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    dts({
-      include: ['src/components/**/*', 'src/utils/**/*', 'src/index.ts'],
-      exclude: ['src/app/**/*'],
-    }),
-  ],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -32,6 +24,7 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        // Asegurarse de que los archivos CSS se generen correctamente
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith('.css')) {
             return 'styles/ui-kit.css'
@@ -41,6 +34,6 @@ export default defineConfig({
       },
     },
     cssCodeSplit: false,
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
 })
