@@ -27,8 +27,10 @@ pnpm install -D tailwindcss@4 postcss autoprefixer @tailwindcss/postcss
 
 ### 1. Configure Tailwind CSS
 
+Add the ui-kit path to your Tailwind configuration:
+
 ```js
-// tailwind.config.js
+// tailwind.config.js or tailwind.config.ts
 export default {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
@@ -37,6 +39,8 @@ export default {
   // ... rest of your config
 }
 ```
+
+**Important:** Make sure to include the ui-kit path in your `content` array so Tailwind can properly scan and include the necessary styles for the components.
 
 ### 2. Configure PostCSS
 
@@ -115,6 +119,22 @@ For detailed documentation, examples, and API reference, visit:
 
 Test components interactively at:
 **[ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)**
+
+## 🔧 Troubleshooting
+
+### Styles not applying?
+
+1. Ensure you've added the ui-kit path to your `tailwind.config.js` content array
+2. Make sure you're importing the styles: `import '@creativoma/ui-kit/styles'`
+3. Verify you're using Tailwind CSS v4 with the correct PostCSS plugin
+
+### TypeScript errors?
+
+Make sure your project includes React types:
+
+```bash
+pnpm install -D @types/react @types/react-dom
+```
 
 ## 🔄 Tailwind CSS v4 Compatibility
 
