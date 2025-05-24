@@ -49,6 +49,7 @@
     "build": "rm -rf dist && npx tsc --project tsconfig.build.json && vite build",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "version:patch": "npm version patch && npm publish",
     "version:minor": "npm version minor && npm publish",
