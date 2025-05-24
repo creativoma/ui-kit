@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './index.css'
+import '../styles.css'
 import { Button } from '@/components/button'
 import { Card } from '@/components/card'
 
