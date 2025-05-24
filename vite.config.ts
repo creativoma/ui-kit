@@ -15,7 +15,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'UIKit',
       formats: ['es', 'umd'],
-      fileName: (format) => `ui-kit.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -27,7 +27,7 @@ export default defineConfig({
         // Asegurarse de que los archivos CSS se generen correctamente
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'styles/ui-kit.css'
+            return 'styles/index.css'
           }
           return assetInfo.name || ''
         },

@@ -30,16 +30,16 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "main": "./dist/ui-kit.umd.js",
-  "module": "./dist/ui-kit.es.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/ui-kit.es.js",
-      "require": "./dist/ui-kit.umd.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     },
-    "./styles": "./dist/styles/ui-kit.css"
+    "./styles": "./dist/styles/index.css"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
