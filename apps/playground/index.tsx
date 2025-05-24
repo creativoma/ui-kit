@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@creativoma/ui-kit/styles'
+import '../../packages/ui/dist/styles/index.css'
 import './index.css'
 import { Playground } from './Playground'
 
