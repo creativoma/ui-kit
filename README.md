@@ -1,6 +1,6 @@
 # UI Kit
 
-A minimal and elegant React component library built with TypeScript, Vite, and Tailwind CSS.
+A minimal and elegant React component library built with TypeScript, Vite, and Tailwind CSS v4.
 
 ## Installation
 
@@ -10,19 +10,25 @@ pnpm install @creativoma/ui-kit
 
 ## Prerequisites
 
-This library requires Tailwind CSS to be installed in your project:
+This library requires Tailwind CSS v4 to be installed in your project:
 
 ```bash
-pnpm install -D tailwindcss postcss autoprefixer
+pnpm install -D tailwindcss@4 postcss autoprefixer
+```
+
+If you're using Tailwind CSS v4, make sure to also install the separate PostCSS plugin:
+
+```bash
+pnpm install -D @tailwindcss/postcss
 ```
 
 ## Setup
 
-Add the library to your Tailwind CSS content configuration:
+1. Add the library to your Tailwind CSS content configuration:
 
 ```js
 // tailwind.config.js
-module.exports = {
+export default {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
     './node_modules/@creativoma/ui-kit/dist/**/*.js',
@@ -31,9 +37,21 @@ module.exports = {
 }
 ```
 
+2. Make sure your PostCSS configuration includes the correct plugin for Tailwind CSS v4:
+
+```js
+// postcss.config.js
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+}
+```
+
 ## Import Styles
 
-You need to import the component styles in your app's entry file:
+Import the component styles in your app's entry file:
 
 ```js
 // In your main entry file (e.g., main.jsx or App.jsx)
@@ -52,7 +70,7 @@ function App() {
         <h1>Welcome</h1>
         <div className="mt-4 flex gap-2">
           <Button>Success</Button>
-          <Button variant="danger" onClick={() => error('Error!')}>
+          <Button variant="danger" onClick={() => alert('Error!')}>
             Error
           </Button>
         </div>
@@ -92,17 +110,25 @@ function App() {
 - `shadow`: `none` | `sm` | `md` | `lg`
 - `border`: boolean
 
+## Tailwind CSS v4 Compatibility
+
+This library is built with Tailwind CSS v4. If you're upgrading from v3, please note some important changes:
+
+1. The PostCSS plugin is now a separate package: `@tailwindcss/postcss`
+2. The default border color has changed to `currentColor` in v4 (we include a compatibility layer)
+3. For more information, check the [Tailwind CSS v4 upgrade guide](https://tailwindcss.com/blog/tailwindcss-v4-alpha)
+
 ## Development
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start playground
-npm run dev
+pnpm dev
 
 # Build library
-npm run build
+pnpm build
 ```
 
 ## License
@@ -136,14 +162,14 @@ git push -u origin main
 npm login
 
 # Build the library
-npm run build
+pnpm build
 
 # Publish
-npm publish --access public
+pnpm publish --access public
 
 # For future versions
-npm version patch  # 0.1.0 -> 0.1.1
-npm version minor  # 0.1.1 -> 0.2.0
-npm version major  # 0.2.0 -> 1.0.0
-npm publish
+pnpm version patch  # 0.1.0 -> 0.1.1
+pnpm version minor  # 0.1.1 -> 0.2.0
+pnpm version major  # 0.2.0 -> 1.0.0
+pnpm publish
 ```
