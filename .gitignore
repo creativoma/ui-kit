@@ -10,7 +10,6 @@ build/
 
 # Astro specific
 **/.astro/
-**/astro.config.*
 
 # Environment Variables
 .env
