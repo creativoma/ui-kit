@@ -2,6 +2,9 @@
 
 A modern React component library built with TypeScript, Vite, and Tailwind CSS v4, organized as a monorepo for better development experience and scalability.
 
+[![npm version](https://badge.fury.io/js/@creativoma%2Fui-kit.svg)](https://www.npmjs.com/package/@creativoma/ui-kit)
+[![CI](https://github.com/creativoma/ui-kit/workflows/PR%20Check/badge.svg)](https://github.com/creativoma/ui-kit/actions)
+
 ## 🚀 Quick Links
 
 - 📦 **NPM Package**: [@creativoma/ui-kit](https://www.npmjs.com/package/@creativoma/ui-kit)
