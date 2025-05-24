@@ -26,6 +26,10 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "main": "./dist/ui-kit.umd.js",
   "module": "./dist/ui-kit.es.js",
   "types": "./dist/index.d.ts",
