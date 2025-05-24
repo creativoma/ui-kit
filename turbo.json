@@ -28,6 +28,11 @@
             "dependsOn": [
                 "^format"
             ]
+        },
+        "type-check": {
+            "dependsOn": [
+                "^type-check"
+            ]
         }
     }
 }
