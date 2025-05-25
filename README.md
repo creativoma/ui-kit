@@ -1,5 +1,7 @@
 # UI Kit Monorepo
 
+![Screenshot](public/screenshot.png)
+
 A modern React component library built with TypeScript, Vite, and Tailwind CSS v4, organized as a monorepo for better development experience and scalability.
 
 [![npm version](https://badge.fury.io/js/@creativoma%2Fui-kit.svg)](https://www.npmjs.com/package/@creativoma/ui-kit)
