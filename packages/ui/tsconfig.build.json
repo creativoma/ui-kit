@@ -11,8 +11,12 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false
+    "strict": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["index.ts", "components/**/*", "utils/**/*"],
+  "include": ["index.ts", "src/**/*"],
   "exclude": ["node_modules", "dist", ".turbo"]
 }
