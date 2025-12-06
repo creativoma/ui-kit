@@ -108,7 +108,6 @@ function App() {
 
 ```tsx
 import { Button } from '@creativoma/ui-kit'
-
 ;<Button variant="default" size="default">
   Click me
 </Button>
@@ -118,7 +117,6 @@ import { Button } from '@creativoma/ui-kit'
 
 ```tsx
 import { Card, CardHeader, CardTitle, CardContent } from '@creativoma/ui-kit'
-
 ;<Card>
   <CardHeader>
     <CardTitle>Card Title</CardTitle>
