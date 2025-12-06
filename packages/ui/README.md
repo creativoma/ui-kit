@@ -85,18 +85,23 @@ function App() {
 ### Available Components
 
 **Layout**
+
 - `Accordion`, `AspectRatio`, `Card`, `Collapsible`, `Resizable`, `ScrollArea`, `Separator`, `Sidebar`
 
 **Forms**
+
 - `Button`, `ButtonGroup`, `Checkbox`, `Field`, `Form`, `Input`, `InputGroup`, `InputOTP`, `Label`, `RadioGroup`, `Select`, `Slider`, `Switch`, `Textarea`, `Toggle`, `ToggleGroup`
 
 **Feedback**
+
 - `Alert`, `AlertDialog`, `Dialog`, `Drawer`, `Empty`, `Progress`, `Sheet`, `Skeleton`, `Sonner`, `Spinner`, `Tooltip`
 
 **Navigation**
+
 - `Breadcrumb`, `Command`, `ContextMenu`, `DropdownMenu`, `HoverCard`, `Menubar`, `NavigationMenu`, `Pagination`, `Popover`, `Tabs`
 
 **Data Display**
+
 - `Avatar`, `Badge`, `Calendar`, `Carousel`, `Chart`, `Kbd`, `Table`
 
 ### Button Example
@@ -104,7 +109,7 @@ function App() {
 ```tsx
 import { Button } from '@creativoma/ui-kit'
 
-<Button variant="default" size="default">
+;<Button variant="default" size="default">
   Click me
 </Button>
 ```
@@ -114,13 +119,11 @@ import { Button } from '@creativoma/ui-kit'
 ```tsx
 import { Card, CardHeader, CardTitle, CardContent } from '@creativoma/ui-kit'
 
-<Card>
+;<Card>
   <CardHeader>
     <CardTitle>Card Title</CardTitle>
   </CardHeader>
-  <CardContent>
-    Content here
-  </CardContent>
+  <CardContent>Content here</CardContent>
 </Card>
 ```
 
