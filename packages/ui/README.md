@@ -5,8 +5,7 @@ A modern React component library with **40+ components** built with TypeScript, 
 ## 🚀 Quick Links
 
 - 📦 **NPM**: [@creativoma/ui-kit](https://www.npmjs.com/package/@creativoma/ui-kit)
-- 🎮 **Live Demo**: [ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)
-- 📚 **Documentation**: [ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)
+- 🌐 **Website**: [ui-kit-website.vercel.app](https://ui-kit-website.vercel.app/)
 - 🔗 **Repository**: [github.com/creativoma/ui-kit](https://github.com/creativoma/ui-kit)
 - 📋 **Changelog**: [CHANGELOG.md](../../CHANGELOG.md)
 
@@ -124,16 +123,6 @@ import { Card, CardHeader, CardTitle, CardContent } from '@creativoma/ui-kit'
   </CardContent>
 </Card>
 ```
-
-## 📖 Full Documentation
-
-For detailed documentation, examples, and API reference, visit:
-**[ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)**
-
-## 🎮 Live Demo
-
-Test components interactively at:
-**[ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)**
 
 ## 🔧 Troubleshooting
 
