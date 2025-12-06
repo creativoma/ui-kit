@@ -1,13 +1,14 @@
 # @creativoma/ui-kit
 
-A minimal and elegant React component library built with TypeScript, Vite, and Tailwind CSS v4.
+A modern React component library with **40+ components** built with TypeScript, Vite, and Tailwind CSS v4.
 
 ## 🚀 Quick Links
 
 - 📦 **NPM**: [@creativoma/ui-kit](https://www.npmjs.com/package/@creativoma/ui-kit)
-- 🎮 **Playground**: [ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)
+- 🎮 **Live Demo**: [ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)
 - 📚 **Documentation**: [ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)
 - 🔗 **Repository**: [github.com/creativoma/ui-kit](https://github.com/creativoma/ui-kit)
+- 📋 **Changelog**: [CHANGELOG.md](../../CHANGELOG.md)
 
 ## 📦 Installation
 
@@ -82,40 +83,54 @@ function App() {
 
 ## 🧩 Components
 
-### Button
+### Available Components
+
+**Layout**
+- `Accordion`, `AspectRatio`, `Card`, `Collapsible`, `Resizable`, `ScrollArea`, `Separator`, `Sidebar`
+
+**Forms**
+- `Button`, `ButtonGroup`, `Checkbox`, `Field`, `Form`, `Input`, `InputGroup`, `InputOTP`, `Label`, `RadioGroup`, `Select`, `Slider`, `Switch`, `Textarea`, `Toggle`, `ToggleGroup`
+
+**Feedback**
+- `Alert`, `AlertDialog`, `Dialog`, `Drawer`, `Empty`, `Progress`, `Sheet`, `Skeleton`, `Sonner`, `Spinner`, `Tooltip`
+
+**Navigation**
+- `Breadcrumb`, `Command`, `ContextMenu`, `DropdownMenu`, `HoverCard`, `Menubar`, `NavigationMenu`, `Pagination`, `Popover`, `Tabs`
+
+**Data Display**
+- `Avatar`, `Badge`, `Calendar`, `Carousel`, `Chart`, `Kbd`, `Table`
+
+### Button Example
 
 ```tsx
-<Button variant="primary" size="md" loading={false}>
+import { Button } from '@creativoma/ui-kit'
+
+<Button variant="default" size="default">
   Click me
 </Button>
 ```
 
-**Props:**
-
-- `variant`: `primary` | `secondary` | `danger` | `ghost`
-- `size`: `sm` | `md` | `lg`
-- `loading`: boolean
-
-### Card
+### Card Example
 
 ```tsx
-<Card padding="md" shadow="sm" border={true}>
-  Content here
+import { Card, CardHeader, CardTitle, CardContent } from '@creativoma/ui-kit'
+
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+  </CardHeader>
+  <CardContent>
+    Content here
+  </CardContent>
 </Card>
 ```
-
-**Props:**
-
-- `padding`: `none` | `sm` | `md` | `lg`
-- `shadow`: `none` | `sm` | `md` | `lg`
-- `border`: boolean
 
 ## 📖 Full Documentation
 
 For detailed documentation, examples, and API reference, visit:
 **[ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)**
 
-## 🎮 Interactive Playground
+## 🎮 Live Demo
 
 Test components interactively at:
 **[ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)**
@@ -147,6 +162,10 @@ Built with Tailwind CSS v4. Key differences from v3:
 ## 🛠️ Development
 
 This package is part of a monorepo. See the [main repository](https://github.com/creativoma/ui-kit) for development instructions.
+
+## 📋 Changelog
+
+See [CHANGELOG.md](../../CHANGELOG.md) for a list of changes.
 
 ## 📄 License
 

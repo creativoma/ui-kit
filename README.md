@@ -2,7 +2,7 @@
 
 ![Screenshot](public/screenshot.png)
 
-A modern React component library built with TypeScript, Vite, and Tailwind CSS v4, organized as a monorepo for better development experience and scalability.
+A modern React component library with **40+ components** built with TypeScript, Vite, and Tailwind CSS v4, organized as a monorepo for better development experience and scalability.
 
 [![npm version](https://badge.fury.io/js/@creativoma%2Fui-kit.svg)](https://www.npmjs.com/package/@creativoma/ui-kit)
 [![CI](https://github.com/creativoma/ui-kit/workflows/PR%20Check/badge.svg)](https://github.com/creativoma/ui-kit/actions)
@@ -10,20 +10,39 @@ A modern React component library built with TypeScript, Vite, and Tailwind CSS v
 ## 🚀 Quick Links
 
 - 📦 **NPM Package**: [@creativoma/ui-kit](https://www.npmjs.com/package/@creativoma/ui-kit)
-- 🎮 **Live Playground**: [ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)
+- 🎮 **Live Demo**: [ui-kit-playground.vercel.app](https://ui-kit-playground.vercel.app/)
 - 📚 **Documentation**: [ui-kit-docs-mu.vercel.app](https://ui-kit-docs-mu.vercel.app/)
+- 📋 **Changelog**: [CHANGELOG.md](./CHANGELOG.md)
+
+## ✨ Features
+
+- **40+ Components**: Comprehensive set of UI components based on shadcn/ui patterns
+- **Tailwind CSS v4**: Built with the latest Tailwind CSS version
+- **TypeScript**: Full type safety and IntelliSense support
+- **React 19**: Compatible with the latest React version
+- **Accessible**: Components follow WAI-ARIA guidelines
+- **Customizable**: Easy to customize with Tailwind classes
 
 ## 📁 Project Structure
 
 ```
 ui-kit/
 ├── apps/
-│   ├── docs/         # Documentation site (Starlight)
-│   └── playground/   # Component testing playground
+│   └── website/      # Component demos & example pages
 ├── packages/
-│   └── ui/          # Main UI Kit library
+│   └── ui/           # Main UI Kit library (40+ components)
 └── ...
 ```
+
+## 🧩 Components
+
+The library includes components for:
+
+- **Layout**: Accordion, AspectRatio, Card, Collapsible, Resizable, ScrollArea, Separator, Sidebar
+- **Forms**: Button, ButtonGroup, Checkbox, Field, Form, Input, InputGroup, InputOTP, Label, RadioGroup, Select, Slider, Switch, Textarea, Toggle, ToggleGroup
+- **Feedback**: Alert, AlertDialog, Dialog, Drawer, Empty, Progress, Sheet, Skeleton, Sonner, Spinner, Tooltip
+- **Navigation**: Breadcrumb, Command, ContextMenu, DropdownMenu, HoverCard, Menubar, NavigationMenu, Pagination, Popover, Tabs
+- **Data Display**: Avatar, Badge, Calendar, Carousel, Chart, Kbd, Table
 
 ## 🛠️ Development
 
@@ -54,24 +73,26 @@ pnpm dev          # Start all apps in development mode
 pnpm build        # Build all packages and apps
 pnpm lint         # Lint all packages
 pnpm type-check   # Type check all packages
+pnpm format       # Format code with Prettier
 
 # Package-specific
-pnpm dev --filter=playground    # Start only playground
-pnpm build --filter=@creativoma/ui-kit  # Build only UI Kit
+pnpm dev --filter=website              # Start only website
+pnpm build --filter=@creativoma/ui-kit # Build only UI Kit
 ```
 
 ## 📦 Packages
 
 ### [@creativoma/ui-kit](./packages/ui)
-The main UI component library with Button, Card, and more components.
+The main UI component library with 40+ components including Button, Card, Dialog, Form, and more.
 
 ## 🚀 Apps
 
-### [Playground](./apps/playground)
-Interactive playground for testing and showcasing components.
+### [Website](./apps/website)
+Interactive demos and example landing pages showcasing all components.
 
-### [Documentation](./apps/docs)
-Comprehensive documentation built with Starlight.
+## 📋 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for a list of changes.
 
 ## 🤝 Contributing
 
