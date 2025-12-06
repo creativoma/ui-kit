@@ -6,6 +6,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+    },
+  },
   build: {
     lib: {
       // Cambia esta línea para apuntar a tu archivo index.ts en lugar de src/index.ts
@@ -15,7 +20,29 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        /^@radix-ui\/.*/,
+        'class-variance-authority',
+        'lucide-react',
+        'clsx',
+        'tailwind-merge',
+        'cmdk',
+        'date-fns',
+        'embla-carousel-react',
+        'input-otp',
+        'next-themes',
+        'react-day-picker',
+        'react-hook-form',
+        'react-resizable-panels',
+        'recharts',
+        'sonner',
+        'vaul',
+        'zod',
+        '@hookform/resolvers',
+      ],
       output: {
         globals: {
           react: 'React',
