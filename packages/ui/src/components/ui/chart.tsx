@@ -104,15 +104,24 @@ const ChartTooltipContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<'div'> & {
     active?: boolean
-    payload?: ReadonlyArray<RechartsPrimitive.Payload<RechartsPrimitive.ValueType, RechartsPrimitive.NameType>>
+    payload?: ReadonlyArray<Record<string, unknown>>
     label?: string | number
     hideLabel?: boolean
     hideIndicator?: boolean
     indicator?: 'line' | 'dot' | 'dashed'
     nameKey?: string
     labelKey?: string
-    labelFormatter?: (value: React.ReactNode, payload: ReadonlyArray<RechartsPrimitive.Payload<RechartsPrimitive.ValueType, RechartsPrimitive.NameType>>) => React.ReactNode
-    formatter?: RechartsPrimitive.Formatter<RechartsPrimitive.ValueType, RechartsPrimitive.NameType>
+    labelFormatter?: (
+      value: React.ReactNode,
+      payload: ReadonlyArray<Record<string, unknown>>
+    ) => React.ReactNode
+    formatter?: (
+      value: unknown,
+      name: unknown,
+      item: unknown,
+      index: number,
+      payload: ReadonlyArray<Record<string, unknown>>
+    ) => React.ReactNode | [React.ReactNode, React.ReactNode]
     color?: string
     labelClassName?: string
   }
@@ -192,20 +201,20 @@ const ChartTooltipContent = React.forwardRef<
           {payload
             .filter((item) => item.type !== 'none')
             .map((item, index) => {
-              const key = `${nameKey || item.name || item.dataKey || 'value'}`
-              const itemConfig = getPayloadConfigFromPayload(config, item, key)
-              const indicatorColor = color || item.payload.fill || item.color
+              const key = `${nameKey || (item as Record<string, unknown>).name || (item as Record<string, unknown>).dataKey || 'value'}`
+              const itemConfig = getPayloadConfigFromPayload(config, item as Record<string, unknown>, key)
+              const indicatorColor = color || ((item as Record<string, unknown>).payload as Record<string, unknown>)?.fill || (item as Record<string, unknown>).color
 
               return (
                 <div
-                  key={item.dataKey}
+                  key={(item as Record<string, unknown>).dataKey as React.Key}
                   className={cn(
                     '[&>svg]:text-muted-foreground flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5',
                     indicator === 'dot' && 'items-center'
                   )}
                 >
-                  {formatter && item?.value !== undefined && item.name ? (
-                    formatter(item.value, item.name, item, index, item.payload)
+                  {formatter && (item as Record<string, unknown>)?.value !== undefined && (item as Record<string, unknown>).name ? (
+                    formatter((item as Record<string, unknown>).value, (item as Record<string, unknown>).name, item, index, payload)
                   ) : (
                     <>
                       {itemConfig?.icon ? (
@@ -241,12 +250,12 @@ const ChartTooltipContent = React.forwardRef<
                         <div className="grid gap-1.5">
                           {nestLabel ? tooltipLabel : null}
                           <span className="text-muted-foreground">
-                            {itemConfig?.label || item.name}
+                            {itemConfig?.label || (item as Record<string, unknown>).name as React.ReactNode}
                           </span>
                         </div>
-                        {item.value && (
+                        {(item as Record<string, unknown>).value && (
                           <span className="text-foreground font-mono font-medium tabular-nums">
-                            {item.value.toLocaleString()}
+                            {((item as Record<string, unknown>).value as number).toLocaleString()}
                           </span>
                         )}
                       </div>
@@ -268,7 +277,7 @@ const ChartLegendContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<'div'> & {
     payload?: ReadonlyArray<RechartsPrimitive.LegendPayload>
-    verticalAlign?: RechartsPrimitive.VerticalAlignmentType
+    verticalAlign?: 'top' | 'bottom' | 'middle'
     hideIcon?: boolean
     nameKey?: string
   }
