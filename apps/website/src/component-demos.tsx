@@ -1378,7 +1378,7 @@ function ResizableDemo() {
   return (
     <div className="space-y-6">
       <DemoSection title="Default">
-        <ResizablePanelGroup direction="horizontal" className="min-h-[200px] max-w-md rounded-lg border">
+        <ResizablePanelGroup orientation="horizontal" className="min-h-[200px] max-w-md rounded-lg border">
           <ResizablePanel defaultSize={50}>
             <div className="flex h-full items-center justify-center p-6">
               <span className="font-semibold">Panel 1</span>
